@@ -2,8 +2,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import Button from "../component/Button";
 import Header from "../component/Header";
 import useDiary from "../hooks/useDiary";
-import { getFormattedDate } from "../utils";
+import {getFormattedDate, setPageTitle} from "../utils";
 import Viewer from "../component/Viewer";
+import {useEffect} from "react";
 
 const Diary = () => {
     const { id } = useParams();
@@ -17,6 +18,10 @@ const Diary = () => {
     const goEdit = () => {
         navigate(`/edit/${id}`);
     };
+
+    useEffect(() => {
+        setPageTitle("uzinee의 감정 일기장");
+    }, []);
 
     if (!data) {
         return <div>일기를 불러오고 있습니다...</div>;
