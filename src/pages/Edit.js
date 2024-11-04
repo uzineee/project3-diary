@@ -26,8 +26,8 @@ const Edit = () => {
 
     const onSubmit = (data) => {
         if (window.confirm("일기를 정말 수정할까요?")) {
-            const { date, content, emotionId } = data;
-            onUpdate(id, date, content, emotionId);
+            const { date, content, emotionId, attachment } = data;
+            onUpdate(id, date, content, emotionId, attachment);
             navigate("/", { replace: true });
         }
     };

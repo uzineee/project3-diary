@@ -59,6 +59,7 @@
     border-radius: 5px;
     word-break: keep-all;
     overflow-wrap: break-word;
+    min-height: 200px;
 }
 
 .Viewer .content_wrapper p {

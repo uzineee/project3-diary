@@ -45,3 +45,15 @@ textarea {
     justify-content: space-around;
     gap: 2%;
 }
+
+.Editor .attachment_wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.Editor .paperclip_button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+}

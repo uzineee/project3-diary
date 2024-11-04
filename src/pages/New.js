@@ -19,8 +19,8 @@ const New = () => {
     };
 
     const onSubmit = (data) => {
-        const { date, content, emotionId } = data;
-        onCreate(date, content, emotionId);
+        const { date, content, emotionId, attachment } = data;
+        onCreate(date, content, emotionId, attachment);
         navigate("/", { replace: true });
     };
 
