@@ -32,3 +32,16 @@
 .DiaryList .menu_wrapper .right_col button {
     width: 100%;
 }
+
+.DiaryList .list_export {
+    padding-top: 10px;
+    justify-content: end;
+    display: flex;
+}
+
+.DiaryList .list_export button{
+    background-color: #AC73FF;
+    color: white;
+    border-radius: 30px;
+}
+
