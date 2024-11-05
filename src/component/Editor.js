@@ -1,5 +1,5 @@
 import "./Editor.css";
-import { useState, useEffect, useCallback, useRef  } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { emotionList, getFormattedDate } from "../utils";
 import Button from "./Button";
 import { useNavigate } from "react-router-dom";
@@ -52,7 +52,15 @@ const Editor = ({ initData, onSubmit }) => {
 
     const handleFileChange = (e) => {
         const file = e.target.files[0];
+        const MAX_FILE_SIZE = 900 * 1024; // 1MB
+
         if (file) {
+            // 파일 크기 체크
+            if (file.size > MAX_FILE_SIZE) {
+                alert("파일 크기가 900KB를 초과할 수 없습니다."); // 사용자 알림
+                return;
+            }
+
             const reader = new FileReader();
             reader.onload = () => {
                 setState((prevState) => ({
